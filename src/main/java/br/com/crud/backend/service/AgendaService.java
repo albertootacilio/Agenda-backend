@@ -12,9 +12,7 @@ public class AgendaService {
 
     public AgendaService(AgendaRepository repository) {this.repository = repository;}
 
-    public List<Agenda> listaTodos(){
-        return repository.findAll();
-    }
+    public List<Agenda> listaTodos(){ return repository.findAll(); }
 
     public Agenda buscarId(Long id) {return this.repository.findById(Agenda.class,id);}
 
